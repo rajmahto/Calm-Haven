@@ -1,0 +1,174 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+.container {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* 🌟 Stylish & Responsive Navbar */
+.navbar {
+    background: linear-gradient(to right, #002855, #004aad);
+    background-size: 200% 200%;
+    animation: gradientTransition 10s ease infinite;
+    color: white;
+    padding: 12px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    z-index: 1000;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* ✅ Navbar Brand (Left Side) */
+.navbar-brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    transition: transform 0.3s ease-in-out;
+    flex: 1;
+    /* Push other elements */
+}
+
+/* ✅ Center Navbar Links */
+.navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 35px;
+    padding: 0;
+    flex-grow: 1;
+    /* Allows it to take available space */
+    justify-content: center;
+    /* Centers the links */
+}
+
+/* ✅ Navbar Links */
+.navbar-links li {
+    position: relative;
+}
+
+/* ✅ Navbar Links - Animations */
+.navbar-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+}
+
+/* ✅ Smooth Underline Effect */
+.navbar-links a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: -3px;
+    left: 0;
+    background: #00bcd4;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar-links a:hover {
+    color: #00bcd4;
+}
+
+.navbar-links a:hover::after {
+    transform: scaleX(1);
+    background: #00bcd4;
+}
+
+/* ✅ Profile Container (Right Side) */
+.profile-container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-left: auto;
+    /* Push to right */
+}
+
+/* ✅ Profile Picture */
+.profile-pic {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 3px solid white;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+/* ✅ Profile Picture Hover Effect */
+.profile-container:hover .profile-pic {
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.5);
+    transform: scale(1.1);
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 8px 20px;
+    }
+
+    .navbar-brand {
+        flex: none;
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+    .navbar-links {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+        flex: none;
+    }
+
+    .navbar-links a {
+        font-size: 1rem;
+        padding: 8px 12px;
+    }
+
+    .profile-container {
+        flex: none;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .profile-pic {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@keyframes gradientTransition {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}

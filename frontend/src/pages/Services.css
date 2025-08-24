@@ -1,0 +1,121 @@
+/* Services.css */
+
+.services-container {
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #1e293b, #475569);
+    color: white;
+    min-height: 100vh;
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.services-title {
+    font-size: 3.5rem;
+    margin-bottom: 40px;
+    font-weight: 700;
+    color: #ffffff;
+    animation: slideDown 1s ease-in-out;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    justify-items: center;
+    padding: 0 20px;
+}
+
+.service-card {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 25px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    width: 100%;
+    max-width: 400px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+
+.service-link {
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+.service-image {
+    width: 100%;
+    height: 220px;
+    border-radius: 15px;
+    object-fit: cover;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: brightness(0.9);
+}
+
+.service-card:hover .service-image {
+    transform: scale(1.05);
+    filter: brightness(1);
+}
+
+.service-name {
+    font-size: 2rem;
+    margin: 15px 0;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.service-description {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #e5e7eb;
+    line-height: 1.6;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .services-title {
+        font-size: 2.8rem;
+    }
+
+    .service-card {
+        padding: 20px;
+    }
+
+    .service-name {
+        font-size: 1.75rem;
+    }
+
+    .service-description {
+        font-size: 0.95rem;
+    }
+}

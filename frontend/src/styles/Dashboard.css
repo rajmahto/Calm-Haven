@@ -1,0 +1,259 @@
+/* 🎨 Stylish Dashboard */
+.dashboard-container {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #121212, #1a1a1a);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+/* 🔹 Dashboard Card */
+.dashboard-card {
+    background-color: #1f1f1f;
+    border-radius: 1rem;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+    width: 100%;
+    max-width: 800px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.dashboard-card:hover {
+    transform: scale(1.02);
+}
+
+/* 🟡 Profile Initials */
+.profile-picture-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 120px;
+    background: #0077ff;
+    border-radius: 50%;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    position: relative;
+    box-shadow: 0 0 12px rgba(0, 119, 255, 0.5);
+}
+
+/* ✏️ Bio Section */
+.bio-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.user-bio {
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+    background: #2a2a2a;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background 0.3s;
+    max-width: 80%;
+}
+
+.user-bio:hover {
+    background: #3a3a3a;
+}
+
+.bio-textarea {
+    background: #2a2a2a;
+    border: none;
+    border-radius: 0.5rem;
+    color: white;
+    font-size: 1rem;
+    padding: 1rem;
+    width: 80%;
+    height: 5rem;
+    resize: none;
+}
+
+.bio-textarea:focus {
+    outline: none;
+    background: #3a3a3a;
+}
+
+/* ✏️ Bio Edit Icon */
+.edit-icon {
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #00bcd4;
+    transition: transform 0.2s;
+}
+
+.edit-icon:hover {
+    transform: scale(1.2);
+    color: #00ffff;
+}
+
+/* 📝 Thoughts Section */
+.thoughts-container {
+    background-color: #2a2a2a;
+    border-radius: 0.5rem;
+    width: 100%;
+    margin-top: 2rem;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.thoughts-title {
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+/* ✏️ Thought Input */
+.thoughts-input-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.thoughts-input {
+    flex-grow: 1;
+    background-color: #3a3a3a;
+    border: none;
+    border-radius: 0.5rem;
+    color: white;
+    font-size: 1rem;
+    padding: 0.75rem;
+}
+
+/* ➕ Add Thought Button */
+.add-thought-button {
+    background: #00bcd4;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+.add-thought-button:hover {
+    transform: scale(1.2);
+    background: #00ffff;
+}
+
+/* 🗑️ Thoughts List */
+.thoughts-list {
+    list-style: none;
+    margin-top: 10px;
+    padding: 0;
+}
+
+.thought-item {
+    background: #3a3a3a;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin: 8px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+.thought-item:hover {
+    background: #4a4a4a;
+}
+
+/* 🗑️ Delete Thought Button */
+.delete-thought-button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: red;
+    font-size: 1.2rem;
+    transition: transform 0.2s;
+}
+
+.delete-thought-button:hover {
+    transform: scale(1.2);
+    color: #ff5252;
+}
+
+/* 🔴 Logout Button */
+.logout-button {
+    background-color: #e53935;
+    border: none;
+    border-radius: 0.5rem;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.logout-button:hover {
+    background-color: #c62828;
+}
+
+/* 🎨 Responsive Design */
+@media (max-width: 768px) {
+    .dashboard-card {
+        padding: 1.5rem;
+    }
+
+    .profile-picture-container {
+        width: 100px;
+        height: 100px;
+        font-size: 2rem;
+    }
+
+    .user-bio {
+        font-size: 0.9rem;
+    }
+
+    .bio-textarea {
+        font-size: 0.9rem;
+    }
+
+    .thoughts-container {
+        padding: 1.25rem;
+    }
+
+    .thoughts-title {
+        font-size: 1.1rem;
+    }
+
+    .thoughts-input {
+        font-size: 0.9rem;
+    }
+
+    .add-thought-button {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+
+    .delete-thought-button {
+        font-size: 1rem;
+    }
+
+    .logout-button {
+        font-size: 0.9rem;
+        padding: 0.6rem 1.25rem;
+    }
+}

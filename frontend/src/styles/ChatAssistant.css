@@ -1,0 +1,122 @@
+/* Chat Assistant Styles */
+.chat-container {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 350px;
+    height: 500px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    transform: translateY(120%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 9999;
+}
+
+/* Show chat when active */
+.chat-container.open {
+    transform: translateY(0);
+}
+
+/* Chat Header */
+.chat-header {
+    background: linear-gradient(to right, #002855, #004aad);
+    color: white;
+    padding: 12px;
+    text-align: center;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Close Button */
+.close-btn {
+    cursor: pointer;
+    color: white;
+}
+
+/* Chat Messages */
+.chat-messages {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    max-height: 400px;
+    background: #f8f8f8;
+}
+
+/* Chat Input */
+.chat-input {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    border-radius: 8px;
+    background: #f1f1f1;
+}
+
+.chat-input button {
+    background: #004aad;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    margin-left: 8px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.chat-input button:hover {
+    background: #002855;
+}
+
+/* Floating Chat Icon */
+.chat-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #004aad;
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 10000;
+}
+
+.chat-icon:hover {
+    background: #002855;
+}
+
+/* User & Bot Messages */
+.message {
+    padding: 8px 12px;
+    margin: 5px;
+    border-radius: 10px;
+    max-width: 80%;
+}
+
+.message.user {
+    background-color: #004aad;
+    color: white;
+    align-self: flex-end;
+}
+
+.message.bot {
+    background-color: #e0e0e0;
+    align-self: flex-start;
+}

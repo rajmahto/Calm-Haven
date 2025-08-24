@@ -1,0 +1,169 @@
+/* Home.css */
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: "Arial", sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    background-image: url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.home-header {
+    text-align: center;
+    padding: 60px 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 20px;
+    animation: slideDown 1s ease-in-out;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.home-title {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #007bff;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.home-subtitle {
+    font-size: 1.5rem;
+    color: #6c757d;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.home-main {
+    flex: 1;
+    padding: 20px;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.home-section {
+    margin-bottom: 30px;
+    padding: 25px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.home-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.section-heading {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #212529;
+}
+
+.home-button {
+    padding: 12px 24px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.home-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.home-footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: rgba(52, 58, 64, 0.9);
+    color: #fff;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.quote-section {
+    min-height: 150px;
+    /* Fixed height for the quote section */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.quote-container {
+    max-height: 100px;
+    /* Fixed height for the quote container */
+    overflow-y: auto;
+    /* Enable scrolling if content exceeds height */
+}
+
+.quote {
+    font-style: italic;
+    font-size: 1.2rem;
+    color: #555;
+    animation: fadeIn 1s ease-in-out;
+    margin: 0;
+    /* Remove default margin */
+}
+
+/* Fade-in animation for sections */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .home-title {
+        font-size: 2.5rem;
+    }
+
+    .home-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .home-section {
+        padding: 15px;
+    }
+
+    .section-heading {
+        font-size: 1.5rem;
+    }
+}
