@@ -1,0 +1,18 @@
+# Dependencies
+node_modules/
+
+# Environment variables
+.env
+
+# Build output
+/frontend/build
+/backend/build
+/frontend/dist
+/backend/dist
+
+# Logs
+*.log
+
+# IDE/editor settings
+.vscode/
+.idea/
